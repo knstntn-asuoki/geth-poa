@@ -234,7 +234,7 @@ Successfully wrote genesis state
 Now, we'd like to actually _start_ the Ethereum protocol running on our custom PoA genesis block. To do that, please enter the following command (this is also provided locally in `PoA Workshop Commands.txt` located within the `geth-poa-tutorial` directory):
 
 ```
-geth --datadir ./ --syncmode 'full' --port 30311 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain "*" --rpcport 8502 --rpcapi 'personal,db,eth,net,web3,txpool,miner' --bootnodes 'enode://ea2cab82d19b0704299ff837c9e10ee90841d24503e2f6d993fafbf351d9b6a1860cb6f20eee0f35412c4c28ca68c0720f623792f24abdf2ad0d386598a5b4e2@127.0.0.1:30310' --networkid 1515 --gasprice '1' --allow-insecure-unlock -unlock 1a4b71b48498237d2817be049b4bc43fad971bca --password password.txt --mine
+geth --datadir ./ --syncmode "full" --port 30311 --http --http.corsdomain "*" --http.port 8502 --http.api 'personal,db,eth,net,web3,txpool,miner' --bootnodes "enode://ea2cab82d19b0704299ff837c9e10ee90841d24503e2f6d993fafbf351d9b6a1860cb6f20eee0f35412c4c28ca68c0720f623792f24abdf2ad0d386598a5b4e2@127.0.0.1:30310" --networkid 1515 --allow-insecure-unlock -unlock 1a4b71b48498237d2817be049b4bc43fad971bca --password password.txt --mine
 ```
 
 If all is successful, you should see two things happen:
@@ -285,7 +285,7 @@ Actually start the Ethereum protocol by entering the slightly-different-but-stil
 **NOTE: THE COMMAND BELOW LOOKS SIMILAR TO NODE 1 BUT IT IS DIFFERENT! YOU MUST COPY AND PASTE THE COMMAND BELOW FOR NODE 2**
 
 ```
-geth --datadir ./ --syncmode 'full' --port 30312 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain "*" --rpcport 8503 --rpcapi 'personal,db,eth,net,web3,txpool,miner' --bootnodes 'enode://ea2cab82d19b0704299ff837c9e10ee90841d24503e2f6d993fafbf351d9b6a1860cb6f20eee0f35412c4c28ca68c0720f623792f24abdf2ad0d386598a5b4e2@127.0.0.1:30310' --networkid 1515 --gasprice '1' --allow-insecure-unlock -unlock f59a61caf69f7216b83f063c2b9b712b82e50e84 --password password.txt
+geth --datadir ./ --syncmode "full" --port 30312 --http --http.corsdomain "*" --http.port 8503 --http.api 'personal,db,eth,net,web3,txpool,miner' --bootnodes "enode://ea2cab82d19b0704299ff837c9e10ee90841d24503e2f6d993fafbf351d9b6a1860cb6f20eee0f35412c4c28ca68c0720f623792f24abdf2ad0d386598a5b4e2@127.0.0.1:30310" --networkid 1515 --allow-insecure-unlock -unlock f59a61caf69f7216b83f063c2b9b712b82e50e84 --password password.txt --mine
 ```
 
 Again, you should see the node activity begin. You should also see more activity on the bootnode screen, this time registering requests from Node 1 AND Node 2:
@@ -313,7 +313,7 @@ geth --datadir ./ init poa.json
 Copy and paste this **UNIQUE NODE 3 COMMAND** to actually start the protocol:
 
 ```
-geth --datadir ./ --syncmode 'full' --port 30313 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain "*" --rpcport 8504 --rpcapi 'personal,db,eth,net,web3,txpool,miner' --bootnodes 'enode://ea2cab82d19b0704299ff837c9e10ee90841d24503e2f6d993fafbf351d9b6a1860cb6f20eee0f35412c4c28ca68c0720f623792f24abdf2ad0d386598a5b4e2@127.0.0.1:30310' --networkid 1515 --gasprice '1' --allow-insecure-unlock -unlock 6dcccc3ab843cf7973986870fbffe55fca71acbd --password password.txt
+geth --datadir ./ --syncmode "full" --port 30313 --http --http.corsdomain "*" --http.port 8504 --http.api 'personal,db,eth,net,web3,txpool,miner' --bootnodes "enode://ea2cab82d19b0704299ff837c9e10ee90841d24503e2f6d993fafbf351d9b6a1860cb6f20eee0f35412c4c28ca68c0720f623792f24abdf2ad0d386598a5b4e2@127.0.0.1:30310" --networkid 1515 --allow-insecure-unlock -unlock 6dcccc3ab843cf7973986870fbffe55fca71acbd --password password.txt
 
 ```
 
